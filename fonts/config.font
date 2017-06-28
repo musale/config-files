@@ -1,20 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
+   <!-- Set preferred serif, sans serif, and monospace fonts. -->
+   <alias>
+      <family>serif</family>
+      <prefer>
+         <family>Ubuntu</family>
+      </prefer>
+   </alias>
+   <alias>
+      <family>sans-serif</family>
+      <prefer>
+         <family>Ubuntu</family>
+      </prefer>
+   </alias>
+   <alias>
+      <family>sans</family>
+      <prefer>
+         <family>Ubuntu</family>
+      </prefer>
+   </alias>
+   <alias>
+      <family>monospace</family>
+      <prefer>
+         <family>Cousine</family>
+      </prefer>
+   </alias>
+   <!-- Aliases for commonly used MS fonts. -->
    <match>
       <test name="family">
-         <string>sans-serif</string>
+         <string>Arial</string>
       </test>
-      <edit name="family" mode="prepend" binding="strong">
-         <string>Noto Color Emoji</string>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
       </edit>
    </match>
    <match>
       <test name="family">
-         <string>serif</string>
+         <string>Helvetica</string>
       </test>
-      <edit name="family" mode="prepend" binding="strong">
-         <string>Noto Color Emoji</string>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <test name="family">
+         <string>Verdana</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <test name="family">
+         <string>Tahoma</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <!-- Insert joke here -->
+      <test name="family">
+         <string>Comic Sans MS</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <test name="family">
+         <string>Times New Roman</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <test name="family">
+         <string>Times</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Ubuntu</string>
+      </edit>
+   </match>
+   <match>
+      <test name="family">
+         <string>Courier New</string>
+      </test>
+      <edit name="family" mode="assign" binding="strong">
+         <string>Cousine</string>
       </edit>
    </match>
    <match>
@@ -22,6 +97,22 @@
          <string>Apple Color Emoji</string>
       </test>
       <edit name="family" mode="prepend" binding="strong">
+         <string>Noto Color Emoji</string>
+      </edit>
+   </match>
+   <match target="scan">
+      <test name="family">
+         <string>Noto Color Emoji</string>
+      </test>
+      <edit name="scalable" mode="assign">
+         <bool>true</bool>
+      </edit>
+   </match>
+   <match target="pattern">
+      <test name="prgname">
+         <string>chrome</string>
+      </test>
+      <edit name="family" mode="prepend_first">
          <string>Noto Color Emoji</string>
       </edit>
    </match>
