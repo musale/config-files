@@ -1,8 +1,7 @@
-export ZSH=/home/iris/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="theunraveler"
 COMPLETION_WAITING_DOTS="true"
 
-plugins=(git)
 source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
@@ -30,10 +29,10 @@ alias add="git add -p"
 alias commit="git commit -m"
 alias vimzsh="vim ~/.zshrc"
 alias srczsh="source ~/.zshrc"
-alias dsa="docker stop $(docker ps -a -q)"
-alias dra="docker rm $(docker ps -a -q)"
-alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --yes-playlist -i --download-archive $HOME/.youtube.txt"
-alias ydlmp3="youtube-dl --extract-audio --audio-format mp3 --yes-playlist -i -c --download-archive $HOME/.youtube.txt"
+# alias dsa="docker stop $(docker ps -a -q)"
+# alias dra="docker rm $(docker ps -a -q)"
+# alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4' --yes-playlist -i --download-archive $HOME/.youtube.txt"
+# alias ydlmp3="youtube-dl --extract-audio --audio-format mp3 --yes-playlist -i -c --download-archive $HOME/.youtube.txt"
 alias start="sudo systemctl start"
 alias restart="sudo systemctl restart"
 alias stop="sudo systemctl stop"
@@ -43,6 +42,8 @@ alias wifi="nmcli device wifi list"
 alias re-zuku="nmcli device wifi connect 'ZUKU' password zuku4321"
 alias re-pluto="nmcli device wifi connect 'Pluto' password iknowican001"
 alias re-contessa="nmcli device wifi connect 'Contessa' password Bartowski"
+alias re-hei="nmcli device wifi connect 'Heisenberg' password Plastics\&1"
+alias re-omsk="nmcli device wifi connect 'omsk' password choulot@345#"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
