@@ -3,7 +3,8 @@
     email = martinmshale@gmail.com
 
 [alias]
-    a = add --all
+    a = add -p
+    all = add --all
     c = commit
     st = status
     co = checkout
