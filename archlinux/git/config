@@ -5,7 +5,7 @@
 [alias]
     a = add -p
     all = add --all
-    c = commit
+    c = commit -m
     st = status
     co = checkout
     up = pull --rebase=preserve
