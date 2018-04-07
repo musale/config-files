@@ -3,8 +3,10 @@ BLUE='\033[1;34m'
 NVM_VERSION=0.33.8
 ZSH_INSTALL="./zsh/install.sh"
 GIT_INSTALL="./git/install.sh"
+I3_INSTALL="./i3/install.sh"
 
 if which pacman &> /dev/null; then
+    mkdir -p $HOME/{.config,go,Projects,Pictures,Downloads}
     sudo pacman -S --noconfirm curl wget vim git
     # Install python2 and python3
     sudo pacman -S --noconfirm python python2 python-pip python2-pip
@@ -14,7 +16,6 @@ if which pacman &> /dev/null; then
 
     # Install golang
     sudo pacman -S --noconfirm go go-tools
-    mkdir -p $HOME/go
     mkdir -p $HOME/go/{src,bin}
 
     # Install docker
@@ -31,7 +32,13 @@ if which pacman &> /dev/null; then
     # Install node version manager
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
 
+    # Install cronie for cronjobs
+    sudo pacman -S --noconfirm cronie
+    sudo systemctl enable cronie.service
+    sudo systemctl start cronie.service
+
     # Installing git
+    . $I3_INSTALL
     . $GIT_INSTALL
     . $ZSH_INSTALL
 fi
