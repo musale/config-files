@@ -9,7 +9,7 @@ HOME=`echo $HOME`
 XINITRC=.xinitrc
 XRESOURCES=.Xresources
 
-sudo pacman -S --noconfirm i3 rofi
+sudo pacman -S --noconfirm i3 rofi compton deepin-screenshot
 
 mkdir -p $HOME/.config/i3
 cp $I3CONFIG $HOME/.config/i3/config

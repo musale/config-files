@@ -184,6 +184,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+exec --no-startup-id compton -b
 exec --no-startup-id blueman-applet
 # exec --no-startup-id xcompmgr -c -f -n
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
