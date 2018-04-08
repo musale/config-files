@@ -4,6 +4,7 @@ NVM_VERSION=0.33.8
 ZSH_INSTALL="./zsh/install.sh"
 GIT_INSTALL="./git/install.sh"
 I3_INSTALL="./i3/install.sh"
+TERMINATOR_INSTALL="./terminator/install.sh"
 
 if which pacman &> /dev/null; then
     mkdir -p $HOME/{.config,go,Projects,Pictures,Downloads}
@@ -39,7 +40,8 @@ if which pacman &> /dev/null; then
     sudo systemctl enable cronie.service
     sudo systemctl start cronie.service
 
-    # Installing git
+    # Installing scripts
+    . $TERMINATOR_INSTALL
     . $I3_INSTALL
     . $GIT_INSTALL
     . $ZSH_INSTALL

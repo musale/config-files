@@ -19,10 +19,10 @@ cp $I3DESKTOP $HOME/.config/i3
 sed -Ei 's/HOME/$HOME/g' $CRONFILE
 cat $CRONFILE | crontab -
 
+cp $XINITRC $HOME/.xinitrc
+cp $XRESOURCES $HOME/.Xresources
+
 if crontab -l &> /dev/null; then
     echo "${BLUE}Checking for installed wallpaper cron"
     echo `crontab -l`
 fi
-
-cp $XINITRC $HOME/.xinitrc
-cp $XRESOURCES $HOME/.Xresources
