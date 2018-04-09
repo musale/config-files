@@ -5,6 +5,8 @@ ZSH_INSTALL="./zsh/install.sh"
 GIT_INSTALL="./git/install.sh"
 I3_INSTALL="./i3/install.sh"
 TERMINATOR_INSTALL="./terminator/install.sh"
+DUNST_INSTALL="./dunst/install.sh"
+FONTS_INSTALL="./fonts/install.sh"
 
 if which pacman &> /dev/null; then
     mkdir -p $HOME/{.config,.fonts,go,Projects,Pictures,Downloads}
@@ -41,6 +43,8 @@ if which pacman &> /dev/null; then
     sudo systemctl start cronie.service
 
     # Installing scripts
+    . $FONTS_INSTALL
+    . $DUNST_INSTALL
     . $TERMINATOR_INSTALL
     . $I3_INSTALL
     . $GIT_INSTALL
