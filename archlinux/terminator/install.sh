@@ -5,3 +5,4 @@ TERMCONFIG=config
 sudo pacman -S --noconfirm terminator
 mkdir -p $HOME/.config/terminator
 cp TERMCONFIG $/.config/terminator/config
+echo "${BLUE}Done installing and setting up terminator"

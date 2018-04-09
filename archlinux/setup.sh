@@ -7,10 +7,10 @@ I3_INSTALL="./i3/install.sh"
 TERMINATOR_INSTALL="./terminator/install.sh"
 
 if which pacman &> /dev/null; then
-    mkdir -p $HOME/{.config,go,Projects,Pictures,Downloads}
+    mkdir -p $HOME/{.config,.fonts,go,Projects,Pictures,Downloads}
     mkdir -p $HOME/Pictures/{Screenshots,Wallpapers}
 
-    sudo pacman -S --noconfirm curl wget vim git htop
+    sudo pacman -S --noconfirm curl wget vim htop
     # Install python2 and python3
     sudo pacman -S --noconfirm python python2 python-pip python2-pip
 
