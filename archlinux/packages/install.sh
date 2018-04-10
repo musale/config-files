@@ -17,7 +17,7 @@ sudo pacman -S --noconfirm --needed curl wget vim htop grep sed bash
 # Install editor, browser and tools
 sudo pacman -S --noconfirm --needed google-chrome-stable visual-studio-code
 sudo pacman -S --noconfirm --needed vlc transmission-gtk
-sudo pacman -S --noconfirm --needed notify-osd arandr
+sudo pacman -S --noconfirm --needed notify-osd arandr tree
 sudo pacman -S --noconfirm --needed xorg-server xorg-apps xorg-xinit xorg-xrandr
 sudo pacman -S --noconfirm --needed gvfs unrar unzip
 
