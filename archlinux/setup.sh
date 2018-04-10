@@ -7,42 +7,14 @@ I3_INSTALL="./i3/install.sh"
 TERMINATOR_INSTALL="./terminator/install.sh"
 DUNST_INSTALL="./dunst/install.sh"
 FONTS_INSTALL="./fonts/install.sh"
+PACKAGES_INSTALL="./packages/install.sh"
 
 if which pacman &> /dev/null; then
     mkdir -p $HOME/{.config,.fonts,go,Projects,Pictures,Downloads}
     mkdir -p $HOME/Pictures/{Screenshots,Wallpapers}
 
-    sudo pacman -S --noconfirm curl wget vim htop
-    # Install python2 and python3
-    sudo pacman -S --noconfirm python python2 python-pip python2-pip
-
-    # Install pip requirements
-    sudo pip install virtualenvwrapper docker-compose youtube-dl
-
-    # Install golang
-    sudo pacman -S --noconfirm go go-tools
-    mkdir -p $HOME/go/{src,bin}
-
-    # Install docker
-    sudo pacman -S --noconfirm docker
-    sudo systemctl start docker.service
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
-
-    # Install network manager
-    sudo pacman -S --noconfirm networkmanager
-    sudo systemctl enable networkmanager.service
-    sudo systemctl start networkmanager.service
-    
-    # Install node version manager
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash
-
-    # Install cronie for cronjobs
-    sudo pacman -S --noconfirm cronie
-    sudo systemctl enable cronie.service
-    sudo systemctl start cronie.service
-
     # Installing scripts
+    . $PACKAGES_INSTALL
     . $FONTS_INSTALL
     . $DUNST_INSTALL
     . $TERMINATOR_INSTALL
