@@ -2,7 +2,7 @@
 BLUE='\033[1;34m'
 TERMCONFIG=config
 
-sudo pacman -S --noconfirm terminator
+sudo pacman -S --noconfirm --needed terminator
 mkdir -p $HOME/.config/terminator
-cp TERMCONFIG $/.config/terminator/config
+cp $TERMCONFIG $/.config/terminator/config
 echo "${BLUE}Done installing and setting up terminator"

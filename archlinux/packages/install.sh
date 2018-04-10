@@ -57,7 +57,7 @@ sudo systemctl start cronie.servic
 # Install sound and volume
 sudo pacman -S --noconfirm --needed pulseaudio pulseaudio-alsa pulseaudio-jack pavucontrol
 sudo pacman -S --noconfirm --needed alsa-utils alsa-plugins alsa-lib alsa-firmware
-sudo pacman -S --noconfirm --needed volumeicon 
+sudo pacman -S --noconfirm --needed volumeicon playerctl
 
 # Install bluetooth
 sudo pacman -S --noconfirm --needed pulseaudio-bluetooth bluez bluez-libs
@@ -67,3 +67,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl daemon-reload
 
+echo "${BLUE}Done installing. Install yaourt and light-git"
