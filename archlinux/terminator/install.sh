@@ -1,8 +1,10 @@
 #!/bin/bash
+PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 BLUE='\033[1;34m'
-TERMCONFIG=./terminator/config
+
+TERMCONFIG=$PARENT_PATH/terminator/config
 
 sudo pacman -S --noconfirm --needed terminator
 mkdir -p $HOME/.config/terminator
 cp $TERMCONFIG $/.config/terminator/config
-echo "${BLUE}Done installing and setting up terminator"
+echo -e "${BLUE}Done installing and setting up terminator"

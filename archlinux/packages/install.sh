@@ -3,13 +3,13 @@ BLUE='\033[1;34m'
 
 # Get fastest servers
 sudo pacman -S --noconfirm --needed reflector
-echo "${BLUE}Getting the fastest servers"
+echo -e "${BLUE}Getting the fastest servers"
 sudo reflector -l 100 -f 50 --sort rate --threads 5 --verbose --save /tmp/mirrorlist.new && rankmirrors -n 0 /tmp/mirrorlist.new > /tmp/mirrorlist && sudo cp /tmp/mirrorlist /etc/pacman.d
-echo "${BLUE}The fastest servers found"
+echo -e "${BLUE}The fastest servers found"
 cat /etc/pacman.d/mirrorlist
-echo "${BLUE}Updating the system"
+echo -e "${BLUE}Updating the system"
 sudo pacman --noconfirm -Syu
-echo "${BLUE}Done updating the system. Setting up..."
+echo -e "${BLUE}Done updating the system. Setting up..."
 
 # Install my zero config packages
 sudo pacman -S --noconfirm --needed curl wget vim htop grep sed bash 
@@ -67,4 +67,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl daemon-reload
 
-echo "${BLUE}Done installing. Install yaourt and light-git"
+echo -e "${BLUE}Done installing. Install yaourt and light-git"

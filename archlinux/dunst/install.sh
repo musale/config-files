@@ -1,5 +1,6 @@
 #!/bin/bash
-DUNST_CONFIG=./dunst/.config
+PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
+DUNST_CONFIG=$PARENT_PATH/dunst/.config
 
 sudo pacman -S --noconfirm --needed dunst
 mkdir -p $HOME/.config/dunst
