@@ -1,5 +1,5 @@
 #!/bin/bash
-DUNST_CONFIG=.config
+DUNST_CONFIG=./dunst/.config
 
 sudo pacman -S --noconfirm --needed dunst
 mkdir -p $HOME/.config/dunst

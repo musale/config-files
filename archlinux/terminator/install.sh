@@ -1,6 +1,6 @@
 #!/bin/bash
 BLUE='\033[1;34m'
-TERMCONFIG=config
+TERMCONFIG=./terminator/config
 
 sudo pacman -S --noconfirm --needed terminator
 mkdir -p $HOME/.config/terminator

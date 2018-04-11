@@ -8,7 +8,7 @@ sudo reflector -l 100 -f 50 --sort rate --threads 5 --verbose --save /tmp/mirror
 echo "${BLUE}The fastest servers found"
 cat /etc/pacman.d/mirrorlist
 echo "${BLUE}Updating the system"
-sudo pacman -Syu
+sudo pacman --noconfirm -Syu
 echo "${BLUE}Done updating the system. Setting up..."
 
 # Install my zero config packages
@@ -43,8 +43,8 @@ sudo usermod -aG docker $USER
 
 # Install network manager
 sudo pacman -S --noconfirm --needed networkmanager network-manager-applet
-sudo systemctl enable networkmanager.service
-sudo systemctl start networkmanager.service
+sudo systemctl enable NetworkManager.service
+sudo systemctl start NetworkManager.service
 
 # Install node version manager
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.sh | bash

@@ -22,3 +22,4 @@ if which pacman &> /dev/null; then
     . $GIT_INSTALL
     . $ZSH_INSTALL
 fi
+echo "${BLUE}Done setting up your archlinux"
