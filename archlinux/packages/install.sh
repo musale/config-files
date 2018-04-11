@@ -22,7 +22,7 @@ sudo pacman -S --noconfirm --needed xorg-server xorg-apps xorg-xinit xorg-xrandr
 sudo pacman -S --noconfirm --needed gvfs unrar unzip
 
 # Install theme for desktop and tools
-sudo pacman -S --noconfirm --needed thunar xcursor-simpleandsoft lxappearance
+sudo pacman -S --noconfirm --needed thunar xcursor-simpleandsoft lxappearance-gtk3
 sudo pacman -S --noconfirm --needed adapta-gtk-theme papirus-icon-theme
 
 # Install python2 and python3
@@ -52,7 +52,7 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v$NVM_VERSION/install.
 # Install cronie for cronjobs
 sudo pacman -S --noconfirm --needed cronie
 sudo systemctl enable cronie.service
-sudo systemctl start cronie.servic
+sudo systemctl start cronie.service
 
 # Install sound and volume
 sudo pacman -S --noconfirm --needed pulseaudio pulseaudio-alsa pulseaudio-jack pavucontrol
