@@ -1,8 +1,8 @@
 #!/bin/bash
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 BLUE='\033[1;34m'
-FONT_AWESOME=$PARENT_PATH/fonts/fontawesome-webfont.ttf
-LOCAL_FONT=$PARENT_PATH/fonts/config
+FONT_AWESOME=$PARENT_PATH/fontawesome-webfont.ttf
+LOCAL_FONT=$PARENT_PATH/config
 
 cp $FONT_AWESOME $HOME/.fonts/fontawesome-webfont.ttf
 sudo cp $LOCAL_FONT /etc/fonts/local.conf
