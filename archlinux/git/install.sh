@@ -2,7 +2,7 @@
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 BLUE='\033[1;34m'
 GITCONFIG=$HOME/.gitconfig
-CONFIG=$PARENT_PATH/git/config
+CONFIG=$PARENT_PATH/config
 
 sudo pacman -S --noconfirm --needed git
 echo -e "${BLUE}Creating the git config..."
