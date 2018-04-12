@@ -15,7 +15,6 @@ echo -e "${BLUE}Done updating the system. Setting up..."
 sudo pacman -S --noconfirm --needed curl wget vim htop grep sed bash 
 
 # Install editor, browser and tools
-sudo pacman -S --noconfirm --needed google-chrome-stable visual-studio-code
 sudo pacman -S --noconfirm --needed vlc transmission-gtk
 sudo pacman -S --noconfirm --needed notify-osd arandr tree
 sudo pacman -S --noconfirm --needed xorg-server xorg-apps xorg-xinit xorg-xrandr
@@ -67,4 +66,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl daemon-reload
 
-echo -e "${BLUE}Done installing. Install yaourt and light-git"
+echo -e "${BLUE}Done installing. Install yaourt to install google-chrome-stable visual-studio-code light-git"
