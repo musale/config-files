@@ -2,7 +2,7 @@
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 BLUE='\033[1;34m'
 
-TERMCONFIG=$PARENT_PATH/terminator/config
+TERMCONFIG=$PARENT_PATH/config
 
 sudo pacman -S --noconfirm --needed terminator
 mkdir -p $HOME/.config/terminator
