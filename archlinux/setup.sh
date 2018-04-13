@@ -1,5 +1,6 @@
 #!/bin/bash
 BLUE='\033[1;34m'
+NC='\033[0m'
 NVM_VERSION=0.33.8
 ZSH_INSTALL="./zsh/install.sh"
 GIT_INSTALL="./git/install.sh"
@@ -22,4 +23,4 @@ if which pacman &> /dev/null; then
     . $GIT_INSTALL
     . $ZSH_INSTALL
 fi
-echo -e "${BLUE}Done setting up your archlinux"
+echo -e "${BLUE}Done setting up your archlinux${NC}"

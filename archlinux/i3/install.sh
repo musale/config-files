@@ -1,6 +1,7 @@
 #!/bin/bash
 PARENT_PATH=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 BLUE='\033[1;34m'
+NC='\033[0m'
 I3CONFIG=$PARENT_PATH/config
 I3STATUS=$PARENT_PATH/i3status.conf
 I3DESKTOP=$PARENT_PATH/desktop.sh
@@ -26,6 +27,6 @@ cp $XINITRC $HOME/.xinitrc
 cp $XRESOURCES $HOME/.Xresources
 
 if crontab -l &> /dev/null; then
-    echo -e "${BLUE}Checking for installed wallpaper cron"
+    echo -e "${BLUE}Checking for installed wallpaper cron ${NC}"
     echo `crontab -l`
 fi

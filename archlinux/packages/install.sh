@@ -1,15 +1,16 @@
 #!/bin/bash
 BLUE='\033[1;34m'
+NC='\033[0m'
 
 # Get fastest servers
 sudo pacman -S --noconfirm --needed reflector
-echo -e "${BLUE}Getting the fastest servers"
+echo -e "${BLUE}Getting the fastest servers${NC}"
 sudo reflector -l 100 -f 50 --sort rate --threads 5 --verbose --save /tmp/mirrorlist.new && rankmirrors -n 0 /tmp/mirrorlist.new > /tmp/mirrorlist && sudo cp /tmp/mirrorlist /etc/pacman.d
-echo -e "${BLUE}The fastest servers found"
+echo -e "${BLUE}The fastest servers found${NC}"
 cat /etc/pacman.d/mirrorlist
-echo -e "${BLUE}Updating the system"
+echo -e "${BLUE}Updating the system${NC}"
 sudo pacman --noconfirm -Syu
-echo -e "${BLUE}Done updating the system. Setting up..."
+echo -e "${BLUE}Done updating the system. Setting up...${NC}"
 
 # Install my zero config packages
 sudo pacman -S --noconfirm --needed curl wget vim htop grep sed bash 
@@ -66,4 +67,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl daemon-reload
 
-echo -e "${BLUE}Done installing. Install yaourt to install google-chrome-stable visual-studio-code light-git"
+echo -e "${BLUE}Done installing. Install yaourt to install google-chrome-stable visual-studio-code light-git${NC}"
