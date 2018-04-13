@@ -37,6 +37,7 @@ mkdir -p $HOME/go/{src,bin}
 
 # Install docker
 sudo pacman -S --noconfirm --needed docker
+sudo systemctl enable docker.service
 sudo systemctl start docker.service
 sudo groupadd docker
 sudo usermod -aG docker $USER
