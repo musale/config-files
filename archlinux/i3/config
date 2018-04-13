@@ -104,7 +104,7 @@ bindsym $mod+Return exec terminator
 bindsym Print exec deepin-screenshot --save-path ~/Pictures/Screenshots
 bindsym $mod+Shift+a exec visual-studio-code
 bindsym $mod+Shift+n exec thunar
-bindsym $mod+Shift+x exec i3lock --color=475269
+bindsym $mod+Shift+x exec i3lock-fancy -p -g -t "Type unlock code"
 bindsym $mod+Shift+g exec google-chrome-stable
 bindsym $mod+d exec rofi -show run
 
@@ -185,5 +185,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 exec --no-startup-id compton -b
+exec --no-startup-id volumeicon
+exec --no-startup-id blueberry-tray
 # exec --no-startup-id xcompmgr -c -f -n
 exec --no-startup-id feh --randomize --bg-fill ~/Pictures/Wallpapers/*
