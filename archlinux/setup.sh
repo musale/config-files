@@ -15,12 +15,12 @@ if which pacman &> /dev/null; then
     mkdir -p $HOME/Pictures/{Screenshots,Wallpapers}
 
     # Installing scripts
+    . $GIT_INSTALL    
     . $PACKAGES_INSTALL
     . $FONTS_INSTALL
     . $DUNST_INSTALL
     . $TERMINATOR_INSTALL
     . $I3_INSTALL
-    . $GIT_INSTALL
     . $ZSH_INSTALL
 fi
 echo -e "${BLUE}Done setting up your archlinux${NC}"
