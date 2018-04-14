@@ -8,5 +8,6 @@ LOCAL_FONT=$PARENT_PATH/config
 cp $FONT_AWESOME $HOME/.fonts/fontawesome-webfont.ttf
 sudo cp $LOCAL_FONT /etc/fonts/local.conf
 sudo pacman -S --noconfirm --needed ttf-ubuntu-font-family noto-fonts-emoji
+yaourt -S --noconfirm ttf-fira-code
 
-echo -e "${BLUE}Done setting up fonts. Install ttf-fira-code for vs-code${NC}"
+echo -e "${BLUE}Done setting up fonts.${NC}"
