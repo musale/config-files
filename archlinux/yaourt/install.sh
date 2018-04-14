@@ -12,16 +12,15 @@ fi
 
 echo -e "${BLUE}Retrieving package-query...${NC}"
 git clone https://aur.archlinux.org/package-query.git
-echo -e "${BLUE}Uncompressing package-query...${NC}"
-cd $PARENT_PATH/package-query
+cd package-query
 echo -e "${BLUE}Installing package-query...${NC}"
 makepkg -si --noconfirm
 cd ..
 echo -e "${BLUE}Retrieving yaourt...${NC}"
-git clone https://aur.archlinux.org/yaourt.git
-echo -e "${BLUE}Uncompressing yaourt...${NC}"
-cd yaourt
+git clone https://aur.archlinux.org/yaourt.git yaourt_
+cd yaourt_
 echo -e "${BLUE}Installing yaourt...${NC}"
 makepkg -si --noconfirm
-rm -rf package-query yaourt
+cd ..
+rm -rf package-query yaourt_
 echo -e "${BLUE}Done installing yaourt!${NC}"
