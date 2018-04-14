@@ -1,6 +1,10 @@
 #!/bin/bash
 BLUE='\033[1;34m'
 NC='\033[0m'
+YAOURT="../archlinux/yaourt/install.sh"
+PACKAGES_INSTALL="./packages/install.sh"
+
+. $YAOURT
 
 # Get fastest servers
 sudo pacman -S --noconfirm --needed reflector
@@ -20,6 +24,7 @@ sudo pacman -S --noconfirm --needed vlc transmission-gtk
 sudo pacman -S --noconfirm --needed notify-osd arandr tree
 sudo pacman -S --noconfirm --needed xorg-server xorg-apps xorg-xinit xorg-xrandr
 sudo pacman -S --noconfirm --needed gvfs unrar unzip
+yaourt -S --noconfirm google-chrome-stable visual-studio-code light-git
 
 # Install theme for desktop and tools
 sudo pacman -S --noconfirm --needed thunar xcursor-simpleandsoft lxappearance-gtk3
@@ -68,4 +73,4 @@ sudo systemctl enable bluetooth.service
 sudo systemctl start bluetooth.service
 sudo systemctl daemon-reload
 
-echo -e "${BLUE}Done installing. Install yaourt to install google-chrome-stable visual-studio-code light-git${NC}"
+echo -e "${BLUE}Done installing packages.${NC}"
