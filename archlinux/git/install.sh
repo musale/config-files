@@ -6,6 +6,7 @@ GITCONFIG=$HOME/.gitconfig
 CONFIG=$PARENT_PATH/config
 
 sudo pacman -S --noconfirm --needed git
+sudo yaourt -S --noconfirm gitflow-avh
 echo -e "${BLUE}Creating the git config...${NC}"
 cp $CONFIG $GITCONFIG
 echo -e "${BLUE}Done creating the git config${NC}"
