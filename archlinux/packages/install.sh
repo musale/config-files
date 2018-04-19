@@ -39,6 +39,7 @@ sudo pip install virtualenvwrapper docker-compose youtube-dl
 # Install golang
 sudo pacman -S --noconfirm --needed go go-tools
 mkdir -p $HOME/go/{src,bin}
+curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
 
 # Install docker
 sudo pacman -S --noconfirm --needed docker
