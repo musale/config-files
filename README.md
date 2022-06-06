@@ -1,6 +1,6 @@
 # Config files
 
-> A collection of my personal config files for the OSs I use. I run arch linux in my laptop. These are the configurations that I use.
+> A collection of my personal config files for the OSs I use. 
 
 ## Getting started
 
