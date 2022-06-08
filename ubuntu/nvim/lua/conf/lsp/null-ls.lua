@@ -14,6 +14,5 @@ null_ls.setup {
     formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
     formatting.gofmt,
     formatting.eslint,
-    diagnostics.eslint,
   },
 }
