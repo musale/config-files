@@ -13,6 +13,7 @@ null_ls.setup {
   sources = {
     formatting.prettier.with { extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } },
     formatting.gofmt,
-    diagnostics.golangci_lint,
+    formatting.eslint,
+    diagnostics.eslint,
   },
 }
